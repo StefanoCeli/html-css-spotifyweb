@@ -1,7 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+main{
+    height: calc(100vh - 90px);
+    background-color: burlywood;
+}
+
+/* NAVBAR LATERALE */
+.nav-aside{
+    height: 100%;
+    width: 230px;
+    background-color: #000;
+    float: left;
+}
+
+.logo{
+    padding: 20px;
+}
+
+.logo img{
+    height: 40px;
+}
+
+.list-aside{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.title{
+    margin: 15px 0;
+}
+
+.list-aside.top{
+    padding: 5px 7px;
+    border-left: 3px solid #000;
+}
+
+.list-aside.bot{
+    margin-bottom: 25px;
+    overflow: auto;
+}
+
+.list-aside.bot i{
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.list-aside img{
+    height: 25px;
+    padding: 0 10px;
+    color: violet;
+}
+
+.overlay{
+    position: absolute;
+}
+
+.list-aside:hover .overlay, .list-aside.active .overlay{
+    display: none;
+}
+
+.list-aside .overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.active{
+    border-left: 3px solid #adff2f;
+    color: #fff;
+}
+
+.menu-aside-bot{
+    margin-left:20px;
+    overflow-y: auto;
+}
+
+/* NAVBAR LATERALE */
+
+
+#content{
+    float: left;
+}
+.upgrade-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 230px);
+    height: 90px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    padding:20px;
+    z-index: 999;
+    
+}
+.upgrade-button{
+    color: white;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+.upgrade-button:focus{
+    outline: none;
+}
+.upgrade-button:hover{
+    transform: scale(1.1);
 }
 footer{
     height: 90px;
     background-color: #282828;
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

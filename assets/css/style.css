@@ -10,6 +10,7 @@ body{
 
 main{
     height: calc(100vh - 90px);
+    
     background-color: burlywood;
 }
 
@@ -25,6 +26,7 @@ main::after{
     width: 230px;
     background-color: #000;
     float: left;
+    overflow-y: hidden;
 }
 
 /* NAV LATERALE TOP */
@@ -95,20 +97,21 @@ main::after{
 
 .menu-aside-bot{
     margin-left:20px;
+    overflow: hidden;
 }
 
 .menu-aside-bot .playlist{
-    height: calc(100vh - 410px);
-    min-height: 160px;
+    height: calc(100vh - 463px);
+    min-height: 100px;
+    margin-top: 25px;
     overflow-y: auto;
 }
 
 .menu-aside-bot .playlist li{
     margin-bottom: 25px;
-    overflow: auto;
 }
 
-.menu-aside-bot .playlist li.add-playlist::before{
+.menu-aside-bot li.add-playlist::before{
     font-family: "Font Awesome 5 Free";
     content: '\f067';
     background-color: #fff;
@@ -116,9 +119,19 @@ main::after{
     padding: 10px;
     margin-right: 10px;
 }
-/* NAV LATERALE TOP */
+/* /NAV LATERALE TOP */
 
-/* NAVBAR LATERALE */
+/* NAV LATERALE BOT */
+.nav-aside-bot{
+    height: 80px;
+    margin-left: 20px;
+}
+.nav-aside-bot .install img{
+    height: 15px;
+}
+/* /NAV LATERALE BOT */
+
+/* /NAVBAR LATERALE */
 
 
 #content{

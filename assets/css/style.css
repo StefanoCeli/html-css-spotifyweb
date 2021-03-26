@@ -94,6 +94,9 @@ main{
 
 .menu-aside-bot{
     margin-left:20px;
+}
+.menu-aside-bot .container-aside-bot{
+    height: calc(100vh - 330px);
     overflow-y: auto;
 }
 

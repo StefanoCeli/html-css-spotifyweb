@@ -12,84 +12,101 @@
     <title>My Spotify</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
        <!--  MAIN -->
-        <main class="clearfix">
+        <main>
+            <!-- NAV LATERALE -->
             <nav class="nav-aside">
-               <div class="logo">
-                <img src="assets/img/logo.svg" alt="logo">
-               </div>
+                <!-- NAV LATERALE TOP -->
+                
+                 <div class="nav-aside-top">
 
-                <div class="menu-aside-top">
-
-                 <div class="list-aside top active">
-                        <img src="assets/img/home.svg" alt="home">
-                        <span>Home</span>
-                        <div class="overlay"></div>
+                    <div class="logo">
+                     <img src="assets/img/logo.svg" alt="logo">
                     </div>
-
-                    <div class="list-aside top">
-                        <img src="assets/img/search.svg" alt="search">
-                        <span>Cerca</span>
-                        <div class="overlay"></div>
-                    </div>
-               
-                    <div class="list-aside top">
-                        <img src="assets/img/libreria.svg" alt="libreria">
-                        <span>La Tua Libreria</span>
-                        <div class="overlay"></div>
-                    </div>
-               </div>
-
-                <div class="menu-aside-bot">
-
-                    <h5 class="title">PLAYLIST</h5>
-
-                   <div class="container-aside-bot">
-                       
-                        <div class="list-aside bot">
-                         <span><i class="fas fa-plus"></i>Crea Playlist</span>
+                    <!-- PRIMA LISTA -->
+                    <ul class="menu-aside menu-aside-top">
+    
+                     <li class="active">
+                            <img src="assets/img/home.svg" alt="home">
+                            <span>Home</span>
                             <div class="overlay"></div>
-                        </div>
+                        </li>
     
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                       <div class="list-aside bot">
-                           <span>Nome Playlist</span>
-                           <div class="overlay"></div>
-                       </div>
-    
-                   </div>
+                        <li>
+                            <img src="assets/img/search.svg" alt="search">
+                            <span>Cerca</span>
+                            <div class="overlay"></div>
+                        </li>
                    
-                </div>
+                        <li>
+                            <img src="assets/img/libreria.svg" alt="libreria">
+                            <span>La Tua Libreria</span>
+                            <div class="overlay"></div>
+                        </li>
+                    </ul>
+                    
+                    <!-- SECONDA LISTA -->
+                    <ul class="menu-aside menu-aside-bot">
+    
+                        <li><span class="title">PLAYLIST</span></li>
+    
+                        <ul class="playlist">
+                           
+                            <li class="add-playlist">
+                                <span>Crea Playlist</span>
+                                <div class="overlay"></div>
+                            </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                           <li>
+                               <span>Nome Playlist</span>
+                               <div class="overlay"></div>
+                           </li>
+        
+                        </ul>
+                       
+                    </ul>
+               </div>
+                <!-- /NAV LATERALE TOP -->
+
+               <!--  NAV LATERALE BOT -->
+
+               <div class="nav-aside-bot">
+                   <div class="install"></div>
+                   <div class="my-profile"></div>
+               </div>
+
+               <!--  /NAV LATERALE BOT -->
 
 
                
@@ -107,7 +124,11 @@
 
         <!-- FOOTER -->
         <footer>
-
+            <section id="player">
+                <div class="player-album"></div>
+                <div class="player-controller"></div>
+                <div class="player-audio"></div>
+            </section>
         </footer>
         <!-- /FOOTER -->
     </div>

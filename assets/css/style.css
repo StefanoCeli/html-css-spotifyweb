@@ -144,6 +144,7 @@ main::after{
     align-items: center;
     position: relative;
     border-bottom: 1px solid #282828;
+    cursor: pointer;
 }
 .nav-aside-bot .install img{
     height: 15px;

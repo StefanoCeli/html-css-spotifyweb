@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,10 +9,19 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
+.overlay{
+    position: absolute;
+}
+.title{
+    margin: 15px 0;
+    font-weight: 700;
+}
 
+/* /GLOBAL */
+
+/* MAIN */
 main{
     height: calc(100vh - 90px);
-    
     background-color: burlywood;
 }
 
@@ -26,6 +37,9 @@ main::after{
     width: 230px;
     background-color: #000;
     float: left;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
     overflow-y: hidden;
 }
 
@@ -39,6 +53,14 @@ main::after{
     height: 40px;
 }
 
+.nav-aside-top .logo-small{
+    display: none;
+    padding: 5px 10px;
+}
+.nav-aside-top .logo-small img{
+   height: 30px;
+}
+
 .nav-aside-top .menu-aside{
     list-style: none;
 }
@@ -46,38 +68,25 @@ main::after{
 .nav-aside-top .menu-aside li{
     display: flex;
     align-items: center;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
     position: relative;
 }
 
-.overlay{
-    position: absolute;
-}
 
-.menu-aside li .overlay{
+.menu-aside li .overlay, .nav-aside-bot .install .overlay{
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.3);
 }
 
-.menu-aside li:hover .overlay{
+.menu-aside li:hover .overlay, .nav-aside-bot .install:hover .overlay{
     display: none;
 }
 
 .menu-aside li.active .overlay{
     width: 20%;
-    background-color: rgba(0,0,0,0.2);
 }
-
-.title{
-    margin: 15px 0;
-    font-weight: 700;
-}
-
 
 .menu-aside-top li{
     padding: 5px 7px;
@@ -88,7 +97,6 @@ main::after{
     height: 25px;
     padding: 0 10px;
 }
-
 
 .menu-aside-top li.active{
     border-left: 3px solid #adff2f;
@@ -124,15 +132,39 @@ main::after{
 /* NAV LATERALE BOT */
 .nav-aside-bot{
     height: 80px;
-    margin-left: 20px;
+    margin: 0 20px;
+}
+.nav-aside-bot .install{
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #282828;
 }
 .nav-aside-bot .install img{
     height: 15px;
+    margin-right: 10px;
+}
+.nav-aside-bot .my-profile{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.nav-aside-bot .my-profile .icon-profile{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #808080;
+    background-image: url(../img/profile.svg);
+    background-position: center;
+    border-radius: 50px;
+    margin-right: 10px;
 }
 /* /NAV LATERALE BOT */
 
 /* /NAVBAR LATERALE */
 
+/* SEZIONE CONTENT */
 
 #content{
     float: left;
@@ -154,6 +186,7 @@ main::after{
 .upgrade-button{
     color: white;
     font-weight: 600;
+    font-size: 12px;
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 25px;
@@ -166,6 +199,11 @@ main::after{
 .upgrade-button:hover{
     transform: scale(1.1);
 }
+/* /SEZIONE CONTENT */
+
+/* /MAIN */
+
+/* FOOTER */
 footer{
     height: 90px;
     background-color: #282828;
@@ -173,4 +211,70 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+/* /FOOTER */
+
+/* MEDIA QUERY */
+
+@media (max-width:600px) {
+   /*  NAV LATERALE */
+    .nav-aside{
+        width: 50px;
+    }
+    .nav-aside-top{
+        height: calc(100vh - 170px);
+        min-height: 160px;
+    }
+    .nav-aside-top .logo{
+        display: none;
+    }
+    .nav-aside-top .logo-small{
+        display: block;
+    }
+    .menu-aside-top li{
+        padding: 5px 0;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-aside-top li.active{
+        border: none;
+    }
+    .menu-aside li.active .overlay{
+        width: 100%;
+       
+    }
+    .menu-aside-top li img{
+        padding: 0;
+    }
+    .menu-aside-top span{
+        display: none;
+    }
+    .menu-aside-bot{
+        display: none;
+    }
+    .nav-aside-bot{
+        margin: 0;
+    }
+    .nav-aside-bot .install{
+        justify-content: center;
+        border: none;
+    }
+    .nav-aside-bot .install img{
+        margin: 0;
+    }
+    .nav-aside-bot .my-profile{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-aside-bot .my-profile .icon-profile{
+        margin: 0;
+    }
+    .nav-aside-bot span{
+        display: none;
+    }
+/*  /NAV LATERALE */
+    .upgrade-bar{
+        width: calc(100% - 50px);
+    }
 }

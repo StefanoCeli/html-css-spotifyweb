@@ -93,21 +93,28 @@ main::after{
     cursor: pointer;
 }
 
+.menu-aside li, .nav-aside-bot .install{
+    color: #b2b2b2; 
+}
 
 .menu-aside li .overlay, .nav-aside-bot .install .overlay{
-    width: 100%;
+    width: 25px;
     height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.3);
 }
 
+.menu-aside li:hover, .nav-aside-bot .install:hover{
+    color: #fff; 
+}
+
 .menu-aside li:hover .overlay, .nav-aside-bot .install:hover .overlay{
     display: none;
 }
 
-.menu-aside li.active .overlay{
-    width: 25px;
+.menu-aside li.active, .menu-aside-bot>li:first-child{
+    color: #fff;
 }
 
 .menu-aside-top li{
@@ -131,6 +138,7 @@ main::after{
 }
 
 .menu-aside-bot{
+    height: calc(100vh - 359px);
     overflow: hidden;
 }
 .menu-aside-bot li:first-child{
@@ -138,7 +146,7 @@ main::after{
 }
 
 .menu-aside-bot .playlist{
-    height: calc(100vh - 463px);
+    height: calc(100% - 105px);
     min-height: 100px;
     margin-top: 25px;
     overflow-y: auto;
@@ -148,13 +156,16 @@ main::after{
     margin-bottom: 25px;
 }
 
-.menu-aside-bot li.add-playlist::before{
+.menu-aside-bot li.add-playlist span::before{
     font-family: "Font Awesome 5 Free";
     content: '\f067';
-    background-color: #fff;
+    background-color: #b2b2b2;
     color: #000;
     padding: 10px;
     margin-right: 10px;
+}
+.menu-aside-bot li.add-playlist:hover span::before{
+    background-color: #fff;
 }
 /* /NAV LATERALE TOP */
 

@@ -337,6 +337,10 @@ main::after{
 .list-songs ul li .song .img-song img{
     width: 100%;   
 }
+.list-songs .artisti-popolari li .song .img-song img{
+    border-radius: 50%;  
+    
+}
 
 .list-songs ul li .song h2{
     font-size: 14px;
@@ -356,6 +360,9 @@ main::after{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+.list-songs .artisti-popolari li .song .img-song .overlay{
+   border-radius: 50%;
 }
 .list-songs ul li .song .img-song .overlay i{
     font-size: 60px;

@@ -35,9 +35,6 @@ body{
     text-decoration: underline;
     cursor: pointer;
 }
-.f-size30{
-    font-size: 30px;
-}
 /* /GLOBAL */
 
 /* MAIN */
@@ -322,10 +319,6 @@ main::after{
     padding-right: 10px;
 }
 
-.list-songs ul li:last-child{
-    padding-right: 0px;
-}
-
 .list-songs ul li .song{
     text-align: center;
     
@@ -355,7 +348,6 @@ main::after{
     top: 0;
     background-color: rgba(0,0,0,0.3);
     text-align: center;
-    position: absolute;
     display: none;
     align-items: center;
     justify-content: center;
@@ -467,6 +459,7 @@ footer{
 }
 #player .player-controller .wrap-controller i:nth-child(3){
     padding: 0 20px;
+    font-size: 30px;
 }
 
 #player .player-controller .wrap-controller i:last-child{
@@ -658,8 +651,23 @@ footer{
     }   
     .icon-player i{
         padding-left: 10px;
+        font-size: 8px;
+    }
+    #player .player-album .icon-player i{
+        font-size: 16px;
     }
     #player .player-album .now-listening img{
         height: 30px;
     }
+    #player .player-controller .wrap-controller{
+        font-size: 12px;
+    }
+    #player .player-controller .wrap-controller i{
+        padding: 0 5px;
+    }
+    #player .player-controller .wrap-controller i:nth-child(3){
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    
 }

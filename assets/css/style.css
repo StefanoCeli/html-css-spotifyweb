@@ -133,6 +133,9 @@ main::after{
 .menu-aside-bot{
     overflow: hidden;
 }
+.menu-aside-bot li:first-child{
+    cursor: text; 
+}
 
 .menu-aside-bot .playlist{
     height: calc(100vh - 463px);
@@ -415,7 +418,7 @@ footer{
 
 /* MEDIA QUERY */
 @media (min-width:600px) and (max-width:1000px){
-    
+
     #player .player-album .now-listening img{
         height: 40px;
     }

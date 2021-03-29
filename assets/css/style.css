@@ -5,18 +5,39 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
+
 .overlay{
     position: absolute;
 }
+
 .title{
     margin: 15px 0;
     font-weight: 700;
 }
 
+.gray-text{
+    color: #808080;
+}
+
+.subtitle{
+    font-size: 10px;
+    color: #808080;
+    font-weight: 700;
+}
+
+.subtitle:hover{
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.f-size30{
+    font-size: 30px;
+}
 /* /GLOBAL */
 
 /* MAIN */
@@ -135,9 +156,11 @@ main::after{
 /* /NAV LATERALE TOP */
 
 /* NAV LATERALE BOT */
+
 .nav-aside-bot{
     height: 80px;
 }
+
 .nav-aside-bot .install{
     padding-bottom: 10px;
     display: flex;
@@ -146,15 +169,18 @@ main::after{
     border-bottom: 1px solid #282828;
     cursor: pointer;
 }
+
 .nav-aside-bot .install img{
     height: 15px;
     margin-right: 10px;
 }
+
 .nav-aside-bot .my-profile{
     padding-top: 15px;
     display: flex;
     align-items: center;
 }
+
 .nav-aside-bot .my-profile .icon-profile{
     display: inline-block;
     width: 25px;
@@ -176,6 +202,7 @@ main::after{
     width: calc(100% - 230px);
     height: 100%;
 }
+
 .upgrade-bar{
     position: fixed;
     top: 0;
@@ -188,6 +215,7 @@ main::after{
     z-index: 999;
     
 }
+
 .upgrade-button{
     color: white;
     font-weight: 600;
@@ -198,10 +226,12 @@ main::after{
     padding: 15px 40px;
     cursor: pointer;
 }
+
 .upgrade-button:focus{
     outline: none;
 }
-.upgrade-button:hover{
+
+.upgrade-button:hover, #player .player-controller .wrap-controller i:hover{
     transform: scale(1.1);
 }
 /* /SEZIONE CONTENT */
@@ -209,6 +239,7 @@ main::after{
 /* /MAIN */
 
 /* FOOTER */
+
 footer{
     height: 90px;
     background-color: #282828;
@@ -217,9 +248,178 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+/* SEZIONE PLAYER */
+
+#player{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#player .player-album, #player .player-audio, #player .player-controller{
+    height: 100%;  
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-wrap: nowrap;   
+}
+
+#player .player-album, #player .player-audio{
+    padding: 0 10px;
+    height: 100%;
+    width: 230px;  
+    /* flex-shrink: 1;  */
+}
+
+#player .player-controller{
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 2;
+}
+
+/* PLAYER-ALBUM */
+
+.icon-player{
+    display: flex;
+}
+
+.icon-player i{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#player .player-album .icon-player{
+    flex-wrap: wrap;
+}
+
+#player .player-album .icon-player i:hover{
+    color: #fff;
+}
+
+#player .player-album .now-listening{
+    display: flex;
+    align-items: center;
+}
+
+#player .player-album .now-listening img{
+    height: 45px;
+}
+
+#player .player-album .now-listening .artist{
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+/* PLAYER CONTROLLER */
+
+#player .player-controller .wrap-controller{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#player .player-controller .wrap-controller i{
+    padding: 0 10px;
+    cursor: pointer;
+}
+#player .player-controller .wrap-controller i:first-child{
+    padding-left: 0 ;
+}
+#player .player-controller .wrap-controller i:nth-child(3){
+    padding: 0 20px;
+}
+
+#player .player-controller .wrap-controller i:last-child{
+    padding-right: 0 ;
+}
+
+#player .player-controller .wrap-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#player .player-controller .wrap-bar::before, #player .player-controller .wrap-bar::after{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+}
+#player .player-controller .wrap-bar::before{
+    content: '0:25';
+    padding-right: 5%;
+}
+
+#player .player-controller .wrap-bar::after{
+    content: '4:35';
+    padding-left: 5%;
+}
+
+.time-bar{
+    height: 5px;
+    border-radius: 5px;
+    background-color: #5a5a5a;
+    cursor: pointer;
+}
+
+#player .player-controller .time-bar{
+    width: 100%;
+}
+
+.time-bar .run-bar{
+    height: 5px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+    position: relative;
+}
+
+.time-bar .run-bar .slide-circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform:translateY(-50%);
+    background-color: #fff;
+    display: none;
+}
+
+.time-bar:hover .run-bar{
+    background-color: #adff2f;  
+}
+
+.time-bar:hover .run-bar .slide-circle{
+    display: block;
+}
+
+/* PLAYER AUDIO */
+
+#player .player-audio .icon-player{
+    font-size: 12px;
+}
+
+#player .player-audio .icon-player i:first-child{
+    padding: 0;
+}
+
+#player .player-audio .time-bar{
+   width: 60%;
+   margin-left: 5%;
+}
+
+
+
 /* /FOOTER */
 
 /* MEDIA QUERY */
+@media (min-width:600px) and (max-width:1000px){
+    
+    #player .player-album .now-listening img{
+        height: 40px;
+    }
+}
 
 @media (max-width:600px) {
    /*  NAV LATERALE */
@@ -276,7 +476,14 @@ footer{
         display: none;
     }
 /*  /NAV LATERALE */
+
     .upgrade-bar{
         width: calc(100% - 50px);
+    }
+    .icon-player i{
+        padding-left: 10px;
+    }
+    #player .player-album .now-listening img{
+        height: 30px;
     }
 }

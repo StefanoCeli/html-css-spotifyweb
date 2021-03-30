@@ -714,4 +714,7 @@ footer{
     .upgrade-bar{
         display: none;
     }
+    .menu-inline{
+        margin-top: 0;
+    }
 }

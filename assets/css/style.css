@@ -626,10 +626,10 @@ footer{
         justify-content: center;
     }
     
-    .menu-aside li.active .overlay{
-        width: 100%;
-       
+    .menu-aside li .overlay, .nav-aside-bot .install .overlay{
+        width: 100%;  
     }
+    
     .menu-aside-top li img{
         padding: 0;
     }

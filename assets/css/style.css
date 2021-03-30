@@ -58,7 +58,7 @@ main::after{
     background-color: #000;
     float: left;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     overflow-y: hidden;
 }
 
@@ -160,6 +160,7 @@ main::after{
     background-color: #b2b2b2;
     color: #000;
     padding: 10px;
+    font-weight: 600;
     margin-right: 10px;
 }
 .menu-aside-bot li.add-playlist:hover span::before{
@@ -239,6 +240,7 @@ main::after{
     border-radius: 25px;
     padding: 15px 40px;
     cursor: pointer;
+    transition: all 1s ease-in-out;
 }
 
 .upgrade-button:focus{
@@ -247,6 +249,7 @@ main::after{
 
 .upgrade-button:hover, #player .player-controller .wrap-controller i:hover{
     transform: scale(1.1);
+    
 }
 
 
@@ -281,8 +284,8 @@ main::after{
 .menu-inline li a{
     text-decoration: none;
     color: #b2b2b2;
-    font-weight: 600;
     font-size: 12px;
+    font-weight: 500;
 }
 .menu-inline li:last-child a{
     padding: 0;
@@ -315,8 +318,10 @@ main::after{
 .list-songs ul li{
     width: calc(100% / 6);
     height: 100%;
-    max-width: 190px;
-    padding-right: 10px;
+    margin-right: 10px;
+}
+.list-songs ul li:last-child{
+    margin: 0;
 }
 
 .list-songs ul li .song{
@@ -336,31 +341,43 @@ main::after{
 }
 
 .list-songs ul li .song h2{
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin: 15px 0;
 }
 .list-songs ul li .song .subtitle{
     margin-bottom: 10px;
+    font-size: 12px;
 }
 .list-songs ul li .song .img-song .overlay{
     width: 100%;
     height: calc(100% - 4px);
     top: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0);
     text-align: center;
-    display: none;
+    display: flex;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
+ 
 }
 .list-songs .artisti-popolari li .song .img-song .overlay{
    border-radius: 50%;
 }
 .list-songs ul li .song .img-song .overlay i{
     font-size: 60px;
+    opacity: 0;
 }
 .list-songs ul li .song .img-song:hover .overlay{
-    display: flex;
+    visibility: visible;
+    background-color: rgba(0,0,0,0.3); 
+    transition: all 1s; 
+}
+.list-songs ul li .song .img-song:hover .overlay i{
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 1s;
 }
 
 
@@ -453,6 +470,7 @@ footer{
 #player .player-controller .wrap-controller i{
     padding: 0 10px;
     cursor: pointer;
+    transition: all  0.5s ease-in-out;
 }
 #player .player-controller .wrap-controller i:first-child{
     padding-left: 0 ;
@@ -555,7 +573,10 @@ footer{
 
     .list-songs ul li{
         max-width: 100%;
-        width: 25%;
+        width: calc(25% - 10px);
+    }
+    .list-songs ul li:nth-child(n+5){
+        display: none;
     }
 
     #player .player-album .now-listening img{
@@ -571,7 +592,10 @@ footer{
     }
     .list-songs ul li{
         max-width: 100%;
-        width: 50%;
+        width: calc(50% - 10px);
+    }
+    .list-songs ul li:nth-child(n+3){
+        display: none;
     }
     #player .player-album .now-listening img{
         height: 40px;
@@ -641,14 +665,29 @@ footer{
     .upgrade-bar{
         width: calc(100% - 50px);
     }
+    .wrap-content h1{
+        font-size: 20px;
+    }
+    .wrap-content>.subtitle{
+        font-size: 12px;
+    }
     .list-songs ul, .list-songs .recently{
         flex-wrap: wrap;
         justify-content: flex-start;
     }
     .list-songs ul li{
         max-width: 100%;
-        width: 50%;
+        width: calc(50% - 10px);
     }   
+    .list-songs ul li:nth-child(n+3){
+        display: none;
+    }
+    .list-songs ul li .song h2{
+        font-size: 14px;
+    }
+    .list-songs ul li .song .subtitle{
+        font-size: 10px;
+    }
     .icon-player i{
         padding-left: 10px;
         font-size: 8px;
@@ -670,4 +709,9 @@ footer{
         padding: 0 10px;
     }
     
+}
+@media (max-height:300px) {
+    .upgrade-bar{
+        display: none;
+    }
 }
